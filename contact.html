@@ -77,76 +77,65 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a href="#" class="navbar-brand"><img src="img/xiamen_nav1.png"></a>
-            </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a> </li>
-                    <li><a href="#travel">Travel</a></li>
-                    <li><a href="#about">About Me</a> </li>
-                    <li><a href="contact.html">Contact</a> </li>
-                </ul>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"><img src="img/xiamen_nav1.png"></a>
         </div>
-    </nav>
+        <ul class="nav navbar-nav">
+            <li><a href="#">Home</a> </li>
+            <li><a href="#travel">Travel</a></li>
+            <li><a href="#about">About Me</a> </li>
+            <li class="active"><a href="contact.html">Contact</a> </li>
+        </ul>
+    </div>
+</nav>
 
-<div id="home" class="container">
-    <div class="starter">
-        <h1>Welcome to Xiamen</h1>
-        <p class="lead"><img src="img/xiamen_logo.png"></p>
+<div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center">CONTACT</h2>
+    <div class="row">
+        <div class="col-sm-5">
+            <p>Contact us and we'll get back to you within 24 hours.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span> Saskatoon, SK, Canada</p>
+            <p><span class="glyphicon glyphicon-phone"></span> +01 306-666-6666</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> xiamen@usask.ca</p>
+        </div>
+        <div class="col-sm-7 slideanim">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <button class="btn btn-default pull-right" type="submit">Send</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-    <div class="padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <img src="img/Xiamen_Island.JPG">
-                </div>
-                <div class="col-sm-6 text-center">
-                    <h2>All about Xiamen, my home city</h2>
-                    <p class="lead">Xiamen, formerly romanized as Amoy, is a sub-provincial city in southeastern Fujian,
-                        China, beside the Taiwan Strait. It is divided into six districts: Huli, Siming, Jimei, Tong'an,
-                        Haicang, and Xiang'an. Altogether, these cover an area of 1,699.39 square kilometers (656.14 sq mi)
-                        with a population of 3,531,347 as of 2010.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 text-center">
-                    <h2>All about Xiamen, my home city</h2>
-                    <p class="lead">Xiamen, formerly romanized as Amoy, is a sub-provincial city in southeastern Fujian,
-                        China, beside the Taiwan Strait. It is divided into six districts: Huli, Siming, Jimei, Tong'an,
-                        Haicang, and Xiang'an. Altogether, these cover an area of 1,699.39 square kilometers (656.14 sq mi)
-                        with a population of 3,531,347 as of 2010.</p>
-                </div>
-                <div class="col-sm-6">
-                    <img src="img/xiamen3.jpeg">
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div id="fixed">
-    </div>
+<div id="fixed">
+</div>
 
-    <!-- Google Maps -->
-    <div id="googleMap" style="height:400px;width:100%;"></div>
-    <script>
-        function myMap() {
-            var myCenter = new google.maps.LatLng(24.477500, 118.090200);
-            var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
-            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-            var marker = new google.maps.Marker({position:myCenter});
-            marker.setMap(map);
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVg5xiTOgtbDCP5u5_MQD1OGSRhwXRtIk&callback=myMap"></script>
+<!-- Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+    function myMap() {
+        var myCenter = new google.maps.LatLng(52.132630, -106.634750);
+        var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var marker = new google.maps.Marker({position:myCenter});
+        marker.setMap(map);
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVg5xiTOgtbDCP5u5_MQD1OGSRhwXRtIk&callback=myMap"></script>
 
 
 <footer class="container-fluid text-center">
