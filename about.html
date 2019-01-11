@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hong_Xue</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" type="text/css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" type="text/css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function(){
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        })
+    </script>
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .starter{
+            display: table-cell;
+            padding: 250px 20px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .navbar-brand{
+            min-height: 55px;
+            padding: 10px 15px 5px;
+        }
+        .navbar-nav li.active a {
+            color: #fff !important;
+            background-color:#29292c !important;
+        }
+        #home{
+            background: url(img/xiamen0_d.jpg) no-repeat center center fixed;
+            display: table;
+            height: 100%;
+            position: relative;
+            width: 100%;
+            background-size: cover;
+        }
+        #home h1,p{
+            color: #FFFFFF;
+        }
+        .row{
+            background: #1b1e21;
+        }
+        #education h2{
+            color: #FFFFFF;
+        }
+        #education p{
+            color: #E5E5E5;
+        }
+        #aboutMe p{
+            color: #FFFFFF;
+        }
+        .padding{
+            background: #1b1e21;
+            padding: 70px 0;
+        }
+        .padding img{
+            width: 100%;
+        }
+        .padding p{
+            color: #cce5ff;
+        }
+        .padding p2{
+            color: #9fcdff;
+        }
+        .padding h2 {
+            color: #9fcdff;
+        }
+        footer{
+            width: 100%;
+            background: #1b1e21;
+            padding: 5% 5% 10% 5%;
+            color: #cce5ff;
+        }
+        .fa{
+            padding: 15px;
+            font-size: 25px;
+            color: #cce5ff;
+        }
+        .fa:hover{
+            color: #9fcdff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- navigation bar-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"><img src="img/me.png" class="img-circle" alt="me" style="width: 40px; height: 40px"></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#myPage">Me</a> </li>
+            <li><a href="#education">Portfolio</a></li>
+            <li><a href="#contact">Contact</a> </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="player">
+    <audio autoplay hidden>
+        <source src="music/so_cute.mp3" type="audio/mpeg">
+        If you're reading this, audio isn't supported.
+    </audio>
+</div>
+
+<div id="home" class="container">
+    <div class="starter">
+        <h1>Hong Xue</h1>
+        <p style="font-size: 23px;">I come from China and go to Canada for university when I was 19. I grew up playing Lego and video games like Pokemon.
+            I'm also really into industrial design, painting, fitness, basketball, and travel.
+        </p>
+    </div>
+</div>
+
+<div id="education" class="row">
+    <div class="starter">
+        <h2>A bit more about myself</h2>
+        <p style="font-size: 23px;">I'm currently an undergraduate student at University of Saskatchewan, working on my computer science degree.
+            My interests includes software development, UX/UI design and Artificial Intelligent.
+        </p>
+    </div>
+</div>
+
+<!-- motion extend -->
+<div id="aboutMe" class="row">
+    <div class="col-sm-4">
+        <p class="text-center"><strong>JustGo</strong></p><br>
+        <a href="#demo" data-toggle="collapse">
+            <img src="img/370ss_0.png" style="width: 450px; height: 300px">
+        </a>
+        <div id="demo" class="collapse">
+            <p>An mobile app to help you manage your diet plan, provide recommendations, and record your exercise
+                results</p>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <p class="text-center"><strong>The Kid</strong></p><br>
+        <a href="#demo2" data-toggle="collapse">
+            <img src="img/306ss_2.png" style="width: 450px; height: 300px">
+        </a>
+        <div id="demo2" class="collapse">
+            <p>A single player, turn-based, 2D puzzle solving game that built using Unity. Naive AI agents will play as
+                your components. Try not getting caught by them and escape from the house!</p>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <p class="text-center"><strong>3D visualization Tool</strong></p><br>
+        <a href="#demo3" data-toggle="collapse">
+            <img src="img/371ss_1.png" style="width: 450px; height: 300px">
+        </a>
+        <div id="demo3" class="collapse">
+            <p>A WebVR application which takes a csv file and outputs a multi-dimensions graph.
+                The app also allows users collaboration with the help of Google firebase</p>
+        </div>
+    </div>
+</div>
+
+
+<footer id="contact" class="container-fluid text-center">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Contact Me</h3>
+            <br>
+            <h4>hong.xue@usask.ca</h4>
+        </div>
+            <div class="col-sm-4">
+            <h3>Social Media</h3>
+            <a href="#wcDemo" class="fa fa-wechat" data-toggle="collapse"></a>
+            <div id="wcDemo" class="collapse">
+                <img src="img/myQR.jpeg"style="width: 180px; height: 180px">
+            </div>
+            <a href="https://www.instagram.com/hong_syue/" class="fa fa-instagram"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/hong-xue/" class="fa fa-linkedin"></a>
+            <a href="https://www.youtube.com/channel/UCYZ2orwp2fzZKOgzn6kkhnQ" class="fa fa-youtube"></a>
+            </div>
+    </div>
+</footer>
+
+</body>
+</html>
